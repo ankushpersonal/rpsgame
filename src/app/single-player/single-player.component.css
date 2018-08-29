@@ -1,0 +1,17 @@
+.textcenter{
+    text-align: center;
+}
+
+.divalign{
+    margin-left: 160px;
+}
+
+.vl {
+    border-left: 6px solid black;
+    height: 590px;
+    margin-top: -50px;
+}
+
+.iconalign{
+    margin-left: 73px;
+}

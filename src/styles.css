@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+
+
+.background{
+    width: auto;
+    height: 662px;
+    background-color: grey;
+}
+.background1{
+    width: auto;
+    height: 662px;
+    background-color : grey;
+}
+
+.wrapper{
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+}

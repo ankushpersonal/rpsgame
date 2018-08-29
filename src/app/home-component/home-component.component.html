@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>
+        RPS game
+      </title>
+</head>
+  <body class="background">
+    <h1 style="text-align:center">Rock Paper Scissors</h1>
+    <div class="container">
+    <div class="row"> 
+    <div class="col align-self-center buttoncenter">
+    <button type="button" [routerLink]="['/gameOptions']" class="btn btn-outline-light btn-block">Start</button>
+    <button type="button" class="btn btn-outline-light btn-block" (click)="viewHelp()" *ngIf="hideHelpText">Help</button>
+    <button type="button" class="btn btn-outline-light btn-block" (click)="hideHelp()" *ngIf="showHelpText">Help</button>
+  </div>
+  </div>
+<br>
+  <div class="alert alert-light" role="alert" *ngIf="showHelpText">
+      <h4 class="alert-heading">Help!!</h4>
+      <p>This is a simple game of rock,papers and scissors. In this game you have two modes. Single player and Multiplayer. In single player mode you will be playing with computer and in multi player mode you can play with your friend.</p>
+      <p>Controls: In single player mode <br>  Left mouse click to choose the option </p>
+      <p>Controls: In Multi player mode <br> Keyboard keys: R is for Rock , P is for Paper and S is for Scissors. And your friend has Num pad where 1 is for Rock , 2 is for paper and 3 is for Scissors.</p>
+    </div>
+  </div>
+    </body>
+  </html>

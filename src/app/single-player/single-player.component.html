@@ -1,0 +1,59 @@
+<html>
+  <body class="background" *ngIf="gameIsOn">
+    <h3 class="textcenter" style="margin-left: 70px;">You vs Computer</h3>
+    
+    <div class="container">
+        <b class="">Score</b> <br>
+        Player: {{playerScoreCount}} | Computer : {{computerScoreCount}}
+      </div>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col divalign">
+        <i class="fa fa-child fa-5x" style="margin-left: 82px;"></i> <br><br> <br>
+        <span>
+          <button type="button" class="btn btn-outline-light" (click)="showRock()">ROCK</button>
+          <button type="button"class="btn btn-outline-light"  (click)="showPaper()">PAPER</button>
+          <button type="button" class="btn btn-outline-light"  (click)="showScissor()">SCISSOR</button>
+        </span> <br><br><br>
+
+        <div class=""> <!-- These are players options -->
+          <i class="fa fa-circle fa-4x iconalign" title="ROCK" *ngIf="playerRock"></i>
+          <i class="fa fa-file fa-4x iconalign" title="PAPER" *ngIf="playerPaper"></i>
+          <i class="fa fa-cut fa-4x iconalign" title="SCISSOR" *ngIf="playerScissor"></i> 
+        </div>
+        </div>
+
+        
+
+        <div class="vl"> <!-- This is for vertical line in between player and computer -->
+        </div>
+
+        <div class="col divalign">
+        <i class="fa fa-desktop fa-5x" style="margin-left: 70px;"></i> <br><br> <br>
+        <span>
+            <button type="button" class="btn btn-outline-light"  (click)="generateRock()">ROCK</button>
+            <button  type="button" class="btn btn-outline-light"  (click)="generatePaper()">PAPER</button>
+            <button  type="button" class="btn btn-outline-light"  (click)="generateScissor()" >SCISSOR</button>
+        </span> <br><br><br>
+
+        <div class=""> <!-- These are coms options -->
+          <i class="fa fa-circle fa-4x iconalign" *ngIf="comRock" title="ROCK"></i>
+          <i class="fa fa-file fa-4x iconalign" *ngIf="comPaper" title="PAPER"></i>
+          <i class="fa fa-cut fa-4x iconalign" *ngIf="comScissor" title="SCISSOR"></i>
+        </div>
+
+        </div>
+        
+
+
+      </div>
+
+  </div>
+  </body>
+
+  <body class="background" *ngIf="gameOver">
+    <h1 *ngIf="playerWins" style="text-align: center;" >Player Wins</h1>
+    <h1 *ngIf="computerWins" style="text-align: center;">Computer Wins</h1>    
+  </body>
+</html>
